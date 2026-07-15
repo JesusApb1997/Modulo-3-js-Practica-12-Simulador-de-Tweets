@@ -106,3 +106,7 @@ function borrarTweet(id) {
     crearHTML();
 }
 
+function sincronizarStorage() {
+    localStorage.setItem('tweets', JSON.stringify(tweets));
+}
+
