@@ -7,10 +7,18 @@ let tweets = [];
 //event listeners
 
 eventListeners();
-
-function eventListeners() {
+//agregando las funciones de localstorage
+function eventListeners(){
+    //cuando el usuario agrega un nuevo tweet
+    document.addEventListener('DOMContentLoaded', () => {
+        tweets = JSON.parse(localStorage.getItem('tweets')) || [];
+        console.log(tweets);
+        crearHTML();
+    });
+    //escuchador del formulario
     formulario.addEventListener('submit', agregarTweet);
 }
+
 
 function agregarTweet(e) {
     e.preventDefault();
