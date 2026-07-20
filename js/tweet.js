@@ -95,8 +95,6 @@ function crearHTML() {
     }
 }
 
-sincronizarStorage();
-
 function limpiarHTML() {
     while (listaTweets.firstChild) {
         listaTweets.removeChild(listaTweets.firstChild)
