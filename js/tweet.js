@@ -44,6 +44,8 @@ function agregarTweet(e) {
         crearHTML();
         formulario.reset();
 
+        sincronizarStorage();
+
     }
 
 
@@ -92,7 +94,8 @@ function crearHTML() {
         })
     }
 }
-simcronizarStorage();
+
+sincronizarStorage();
 
 function limpiarHTML() {
     while (listaTweets.firstChild) {
@@ -105,6 +108,8 @@ function borrarTweet(id) {
     tweets = tweets.filter(tweet => tweet.id !== id);
     console.log(tweets)
     crearHTML();
+
+    sincronizarStorage();
 }
 
 //agregar la funcion de sincronizar el localstorage cada vez que se cree un nuevo tweet
