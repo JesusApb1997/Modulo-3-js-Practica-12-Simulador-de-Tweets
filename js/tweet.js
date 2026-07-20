@@ -10,6 +10,7 @@ eventListeners();
 //agregando las funciones de localstorage
 function eventListeners(){
     //cuando el usuario agrega un nuevo tweet
+    //carga el contenido de los tweets guardados en el localstorage
     document.addEventListener('DOMContentLoaded', () => {
         tweets = JSON.parse(localStorage.getItem('tweets')) || [];
         console.log(tweets);
